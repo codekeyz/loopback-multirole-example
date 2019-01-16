@@ -47,5 +47,9 @@
   "Admin": {
     "dataSource": "db",
     "public": true
+  },
+  "Client": {
+    "dataSource": "db",
+    "public": true
   }
 }

@@ -25,4 +25,27 @@ module.exports = function(app) {
       return cb(null, true);
     });
   });
+
+  Role.registerResolver('Client', function(role, context, cb) {
+    function reject() {
+      process.nextTick(function() {
+        cb(null, false);
+      });
+    }
+
+    // do not allow anonymous users
+    var userId = context.accessToken.userId;
+    if (!userId) {
+      return reject();
+    }
+
+    app.models.Client.findById(userId, function(err, client) {
+      // A: The datastore produced an error! Pass error to callback
+      if (err) return cb(err);
+      // A: There's no wholeSaler by this ID! Pass error to callback
+      if (!client) return reject();
+
+      return cb(null, true);
+    });
+  });
 };

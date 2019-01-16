@@ -1,6 +1,7 @@
-# Multi-User Loopback-3
+# Multi-Role Example Loopback-3
 
-This starter is useful for creating multi-role or user
-REST-API using IBM-StrongLoop Loopback 3.
+This example is a showcase of using the [loopback-multirole-api-starter](https://github.com/codekeyz/loopback-multirole-api-starter)
 
-> All your User Models should extend BaseUser. That's the rule
+> We have Admin & Client User Models
+
+Only Admins can find all Admins. Clients cannot find Admins.

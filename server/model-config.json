@@ -38,7 +38,7 @@
   },
   "BaseUser": {
     "dataSource": "db",
-    "public": true
+    "public": false
   },
   "MultiAccessToken": {
     "dataSource": "db",

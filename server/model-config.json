@@ -43,5 +43,9 @@
   "MultiAccessToken": {
     "dataSource": "db",
     "public": false
+  },
+  "Admin": {
+    "dataSource": "db",
+    "public": true
   }
 }
